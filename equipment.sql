@@ -24,42 +24,42 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `reservations`
+-- Table structure for table `equipment`
 --
 
-CREATE TABLE `reservations` (
-  `id` int(11) NOT NULL,
-  `venue_name` varchar(255) DEFAULT NULL,
-  `purpose` varchar(255) DEFAULT NULL,
-  `reservation_date` date DEFAULT NULL,
-  `start_time` time DEFAULT NULL,
-  `end_time` time DEFAULT NULL,
-  `grace_period` int(11) DEFAULT NULL,
-  `contact_person` varchar(255) DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `sector` varchar(255) DEFAULT NULL,
-  `date_reserved` date DEFAULT NULL
+CREATE TABLE `equipment` (
+  `name` varchar(50) NOT NULL,
+  `available_quantity` int(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Indexes for dumped tables
+-- Dumping data for table `equipment`
 --
 
---
--- Indexes for table `reservations`
---
-ALTER TABLE `reservations`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `reservations`
---
-ALTER TABLE `reservations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+INSERT INTO `equipment` (`name`, `available_quantity`) VALUES
+('Big Movable White Board', 1),
+('Big Monoblock Table', 6),
+('Brown Round Table Cloth', 36),
+('Circular Platform', 2),
+('Fender', 10),
+('Gooseneck Microphone', 4),
+('Green Carpet', 2),
+('LED Lights', 10),
+('Loose Board', 9),
+('Long Rectangular Table', 6),
+('Monoblock Chairs', 1300),
+('Monoblock Seat Cover', 600),
+('Moving Heads', 4),
+('Podium', 4),
+('Red Carpet', 4),
+('RGB Lights', 8),
+('Round Table', 40),
+('Small Monoblock Table', 4),
+('Small Movable White Board', 2),
+('Square Platform', 9),
+('White Round Table Cloth', 10),
+('Wired Microphone', 6),
+('Wireless Microphone', 4);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

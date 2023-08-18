@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 14, 2023 at 09:56 AM
+-- Generation Time: Aug 18, 2023 at 07:13 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -33,18 +33,12 @@ CREATE TABLE `equipment_reservation` (
   `quantity` int(6) NOT NULL,
   `place` varchar(255) NOT NULL,
   `date_needed` date DEFAULT NULL,
+  `time_needed` time NOT NULL,
   `date_reserved` date DEFAULT NULL,
   `contact_person` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
   `sector` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `equipment_reservation`
---
-
-INSERT INTO `equipment_reservation` (`reservation_id`, `equipment_name`, `quantity`, `place`, `date_needed`, `date_reserved`, `contact_person`, `sector`) VALUES
-(12, 'Fender', 2, 'Gym', '2023-07-21', '2023-07-14', 'George', 'SHS'),
-(13, 'Monoblock Seat Cover', 230, 'Gym', '2023-07-21', '2023-07-14', 'George', 'SHS');
 
 --
 -- Indexes for dumped tables
@@ -64,7 +58,7 @@ ALTER TABLE `equipment_reservation`
 -- AUTO_INCREMENT for table `equipment_reservation`
 --
 ALTER TABLE `equipment_reservation`
-  MODIFY `reservation_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `reservation_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
